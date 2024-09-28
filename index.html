@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+            background-color: #ff6f61;
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+            
+
+        }
+
+        ul{
+            
+            list-style-type: none;
+        }
+
+        li{
+            display: inline;
+            margin-inline: 0.5rem;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+
+        header{
+            background-color: #ff6f61;
+            color: white;
+            margin-top: 2rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .timeline{
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .container{
+            padding: 1rem 2rem;
+            position: relative;
+            background-color: white;
+            width: 120px;
+            box-shadow: 0 0 10px(0, 0, 0, 0.1);
+        }
+
+        .left{
+            left: 0;
+        }
+
+        .right{
+            left: 50%;
+        }
+
+        .content{
+            padding: 1rem;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 1rem;
+        }
+         
+        span{
+            color: rgb(84, 207, 84);
+        }
+
+        .container::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .left::after{
+            top: 15px;
+            right: -15px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after{
+            top: 15px;
+            right: -15px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Responsive Design*/
+        @media screen and (min-width: 1000px) {
+            .container{
+                width: 50%;
+                padding: 1rem 2rem;
+                position: relative;
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Her&Him</h2>
+        <ul>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Quiz.html">Quiz</a></li>
+            <li><a href="Letter.html">Letter</a></li>
+        </ul>
+    </nav>
+     
+    <header>
+        <h1>JOUR LOVE STORY</h1>
+    </header>
+
+    <section class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>Our Names</h2>
+                <p>My Name is <span>Justice</span>, Her name is <span>Unarine.</span></p>
+                <img src="img/7.jpg" alt="x">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>The Start</h2>
+                <P>The day she said <span>YES</span> was on the 18th of june 2022.</P>
+                <img src="img/8.jpg" alt="x">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>LOVE</h2>
+                <p>Our Love is going perfectly fine and we are happy, we've been dating for Two years now</p>
+                <img src="img/9.jpg" alt="x">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>Quote</h2>
+                <p>"Maybe one person, but to one person you are the world"</p>
+                
+                <img src="img/OIP.jpg" alt="x">
+            </div>
+        </div>
+        
+        
+    </section>
+</body>
+</html>
